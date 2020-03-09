@@ -1,0 +1,1 @@
+System.register(["./p-0fc552fc.system.js"],(function(){"use strict";var t,e;return{setters:[function(n){t=n.p;e=n.b}],execute:function(){t().then((function(t){return e([["p-eqzzksu4.system",[[4,"component-b"],[4,"component-a"]]]],t)}))}}}));

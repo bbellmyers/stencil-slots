@@ -1,0 +1,1 @@
+import{r as n,h as o}from"./p-6034183d.js";const s=class{constructor(o){n(this,o)}render(){return o("div",{class:"component-a-inserted"},o("slot",null))}},t=class{constructor(o){n(this,o)}render(){return o("component-a",null,o("slot",null))}};export{s as component_a,t as component_b};

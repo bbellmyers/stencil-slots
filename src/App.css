@@ -1,0 +1,39 @@
+component-b {
+  display: block;
+  outline: 2px solid lightgreen;
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+
+.component-b {
+  font-weight: bold;
+  color: lightgreen;
+}
+
+.component-a {
+  font-weight: bold;
+  color: red;
+}
+
+component-a {
+  display: block;
+  outline: 2px solid red;
+  padding: 0.3em;
+}
+
+.example {
+  background-color: #eee;
+  margin-top: 0.3em;
+  padding: 0.25em;
+}
+
+.example:first-child {
+  margin-top: 0;
+}
+
+.App {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 586px;
+}

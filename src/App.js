@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      children: [1,2],
+      children: ['foo','bar'],
     };
     this.moreChildren = this.moreChildren.bind(this);
     this.fewerChildren = this.fewerChildren.bind(this);
@@ -14,13 +14,13 @@ class App extends Component {
 
   moreChildren() {
     this.setState({
-      children: [1,2,3]
+      children: ['baz','goo','gak']
     });
   }
 
   fewerChildren() {
     this.setState({
-      children: [1]
+      children: ['awk']
     })
   }
 
@@ -31,16 +31,16 @@ class App extends Component {
         <p>
           Given: one or more nested Stencil container tags with Shadow DOM off,
           which insert DOM levels between the Host and the &lt;slot /&gt;.
-          <ul>
-            <li><span className="component-a">component-a</span>: Inserts a div between host and &lt;slot /&gt;.</li>
-            <li><span className="component-b">component-b</span>: Renders its &lt;slot /&gt; inside component-a</li>
-          </ul>
         </p>
+        <ul>
+          <li><span className="component-a">component-a</span>: Inserts a div between host and &lt;slot /&gt;.</li>
+          <li><span className="component-b">component-b</span>: Renders its &lt;slot /&gt; inside component-a</li>
+        </ul>
         <p>
           When React manages the children of the Stencil container tag, it fails
           to add and remove them correctly.
         </p>
-        <component-b>
+        <component-b key={`component-b-${children.length}`}>
           {children.map((child, index) => (
             <div className="example" key={`item-${index}`}>child {child}</div>
           ))}

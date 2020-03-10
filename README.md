@@ -15,3 +15,18 @@ When adding more children, they are inserted outside component-a.
 When adding fewer children, React throws a console error, and app fails to render.
 
 The Stencil component library is built from this project: https://github.com/bbellmyers/stencil-slot-order
+
+## Stop-gap Solution
+If you alter the example to add a React key attribute that is driven by the
+mapped children array length, then you can force a repaint of the entire
+container component, avoiding this failure condition (at the expense of
+rendering performance, unfortunately):
+
+```
+<component-b key={`component-b-${children.length}`}>
+  {children.map((child, index) => (
+    <div className="example"
+      key={`item-${index}`}>child {child}</div>
+  ))}
+</component-b>
+```

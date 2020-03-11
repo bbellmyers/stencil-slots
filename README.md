@@ -30,3 +30,6 @@ rendering performance, unfortunately):
   ))}
 </component-b>
 ```
+
+## Stencil Issue
+I have logged the following issue with the Stencil project: https://github.com/ionic-team/stencil/issues/2259

@@ -40,7 +40,7 @@ class App extends Component {
           When React manages the children of the Stencil container tag, it fails
           to add and remove them correctly.
         </p>
-        <component-b key={`component-b-${children.length}`}>
+        <component-b>
           {children.map((child, index) => (
             <div className="example" key={`item-${index}`}>child {child}</div>
           ))}
